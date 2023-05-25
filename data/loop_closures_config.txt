@@ -1,0 +1,104 @@
+# Odometry calibration file
+odom_calib = none
+# Fused odometry file (optimized using graphslam)
+fused_odom = none
+# Number of correction steps when reinitializing particle filter
+n_corrections_when_reinit = 20
+# Ignore points with z-coord (in sensor reference) above this threshold
+ignore_above_threshold = -0.3
+# Ignore points with z-coord (in sensor reference) below this threshold
+ignore_below_threshold = -1.79769e+308
+# Offset to subtract the pose (x-coord)
+offset_x = 0
+# Offset to subtract the pose (y-coord)
+offset_y = 0
+# Whether or not to use pitch, and roll angles from xsens
+use_xsens = 1
+# Id of the gps to be used
+gps_id = 1
+# intensity mode [reflectivity, colour, semantic]
+intensity_mode = reflectivity
+# Flag to choose using the velodyne calibration or not.
+use_calib = 1
+# Flag for choosing to segment lane marks with threshold image processing.
+segment_lane_marks = 0
+# Camera latency in seconds
+camera_latency = 0
+# Flag to use semantic remapping or not.
+use_semantic_remapping = 1
+# Size of voxels in voxel grid filter
+voxel_size = 0.05
+# Maximum distance (in meters) to assume two poses form a loop closure
+loop_dist = 2
+# Minimum temporal difference (in seconds) to assume two poses form a loop closure (instead of being consecutive poses)
+time_dist = 60
+# Number of data packages to skip when looking for loop closures (<= 1 for using all packages)
+subsampling = 0
+# Path to a file to save debug information
+report_file = /tmp/loop_closure_report.txt
+# Skip data packages with absolute velocity below this theshold
+v_thresh = 1
+# Distance to accumulate clouds
+dist_to_accumulate = 2
+# Number of particles
+n_particles = 50
+# Flag to choose if GPS data should be used for weighting particles
+use_gps_weight = 0
+# Flag to choose if the map should be used for weighting particles
+use_map_weight = 1
+# Flag to choose if the ECC should be used for weighting particles
+use_ecc_weight = 0
+# Std of gps position (m)
+gps_xy_std = 0.5
+# Std of gps heading estimates (degrees)
+gps_h_std = 5
+# Std of linear velocity measurements (m/s)
+v_std = 0.2
+# Std of steering wheel angle measurements (degrees)
+phi_std = 0.5
+# Std of dead reckoning position estimates (m)
+odom_xy_std = 0.1
+# Std of dead reckoning heading estimates (degrees)
+odom_h_std = 0.5
+# Std of pixel color measurements
+color_red_std = 3
+# Std of pixel color measurements
+color_green_std = 3
+# Std of pixel color measurements
+color_blue_std = 3
+# Std of pixel color measurements
+reflectivity_std = 3
+# Seed for pseudo-random number generator
+seed = 0
+# Frequency in which correction takes place [<= 1 for always correcting]
+correction_step = 1
+# Minimum number of steps to wait until a new map reload from disk
+steps_to_skip_map_reload = 5
+# Directory for saving images of the localization execution
+save_dir = 
+# Map resolution
+resolution = 0.2
+# Map tiles size
+tile_size = 70
+# Flag for choosing to save or not the maps
+save_maps = 1
+# Flag for choosing to delete or not previous maps of the same region
+clean_map = 0
+# Flag to set visualization on or off
+view = 1
+# Width of the map's visualization
+viewer_width = 600
+# Visualization flag.
+view_pointcloud = 1
+# Visualization flag.
+view_imgs = 1
+# Flag for choosing to pause the viewer or not in the beginning
+start_paused = 0
+# Flag for choosing to build or not this type of map.
+build_occupancy_map = 1
+# Flag for choosing to build or not this type of map.
+build_semantic_map = 1
+# Flag for choosing to build or not this type of map.
+build_visual_map = 1
+# Flag for choosing to build or not this type of map.
+build_reflectivity_map = 1
